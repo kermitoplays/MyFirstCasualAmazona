@@ -5,7 +5,7 @@ const data = { /*data is an object*/
             name: 'Nike Slim Shirt',
             category: 'Shirts',
             image: '/images/p1.jpg',
-            price: 120,
+            price: 10,
             brand: 'Nike',
             rating: 4.5,
             numReviews: 10,
