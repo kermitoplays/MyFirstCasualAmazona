@@ -1,0 +1,105 @@
+html{
+  font-size: 62.5%; /*default 16px x 62.5 = 10px = 1rem*/
+  box-sizing: border-box; /*easier manage boxes padding borders margins*/
+}
+body{
+  border: 0;
+  height: 100vh;/*100 view port height*/
+  font-size: 1.6rem;
+  font-family: Helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+#root{
+  height: 100%;/*because we have a div in index.html id=root and want 100% height*/
+}
+/*Layout*/
+.grid-container{
+  display: grid;/*new system very responsive*/
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;/*50px for header rest for main and 50 for footer*/
+  height: 100%;
+}
+header{
+  grid-area: header; /*place this in place holder of above*/
+  background-color: #203040;
+}
+main{
+  grid-area: main;/*connect grid area to main*/
+  padding: 1rem;
+
+}
+footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+}
+/*common calss*/
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+a{
+  text-decoration: none;/*remove underlines*/
+}
+a:hover{/*if hover on link then orange color*/
+  color: #ff8000;
+}
+/*header*/
+header a{ /*all links inside header*/
+  color: #ffffff;
+  padding: 1rem;
+}
+a.brand{/*different font for our brand*/
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;/*set rows responsive. if not enough space go to next line*/
+  justify-content: space-between;/*max distance in a row*/
+  align-items: center;/*vertically center*/
+}
+.row.center{
+  justify-content: center;
+}
+
+/*image*/
+img{
+  border-radius: 0.5rem;
+}
+img.medium{
+  max-width: 29rem;
+  width: 100%;
+}
+/*card*/
+.card{
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body{
+  padding: 1rem;
+}
+.card-body > *{/*for all children of card body*/
+  margin-bottom: 0.5rem;
+}
+.price{
+  font-size: 2rem;
+}
+/*rating*/
+.rating span{/*all spans in rating*/
+  color: #f0c040;
+  margin: 0.1rem;
+}
