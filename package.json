@@ -1,0 +1,28 @@
+{
+  "name": "amazona",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kermitoplays/MyFirstCasualAmazona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kermitoplays/MyFirstCasualAmazona/issues"
+  },
+  "homepage": "https://github.com/kermitoplays/MyFirstCasualAmazona#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.21.5",
+    "nodemon": "^2.0.6"
+  }
+}
