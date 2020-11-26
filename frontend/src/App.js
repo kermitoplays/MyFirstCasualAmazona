@@ -20,7 +20,7 @@ function App() {
         </header>
         <main>
           <Route path="/product/:id" component={ProductScreen}></Route> {/*add routes to main always*/}
-          <Route path="/" component={HomeScreen} exact="true"></Route>
+          <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">All Right Reserved</footer>
       </div>
