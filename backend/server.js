@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));//conver to req.body in node
 mongoose.connect(
   process.env.MONGODB_URL ||
-    "mongodb+srv://kermitoplays:realpass@cluster0.tks4g.mongodb.net/amazona",
+    `mongodb+srv://kermitoplays:${process.env.MONGODB_PASS}@cluster0.tks4g.mongodb.net/amazona`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
