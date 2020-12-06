@@ -1,7 +1,22 @@
+import bcrypt from "bcryptjs";
+
 const data = { /*data is an object*/
+    users:[
+    {
+        name:"Admin",
+        email:"email@email.com",
+        password: bcrypt.hashSync("realpass",8),
+        isAdmin: true,
+    },
+    {
+        name:"firstuser",
+        email:"firstuser@email.com",
+        password: bcrypt.hashSync("userpass",8),
+        isAdmin: false,
+    },
+    ],
     products: [
         {
-            _id: '1',
             name: 'Nike Slim Shirt',
             category: 'Shirts',
             image: '/images/p1.jpg',
@@ -13,7 +28,6 @@ const data = { /*data is an object*/
             countInStock: 10,
         },
         {
-            _id: '2',
             name: 'Adidas Fit Shirt',
             category: 'Shirts',
             image: '/images/p2.jpg',
@@ -25,7 +39,6 @@ const data = { /*data is an object*/
             countInStock: 20,
         },
         {
-            _id: '3',
             name: 'Lacoste Free Shirt',
             category: 'Shirts',
             image: '/images/p3.jpg',
@@ -37,7 +50,6 @@ const data = { /*data is an object*/
             countInStock: 0,
         },
         {
-            _id: '4',
             name: 'Nike Slim Pant',
             category: 'Pants',
             image: '/images/p4.jpg',
@@ -49,7 +61,6 @@ const data = { /*data is an object*/
             countInStock: 3,
         },
         {
-            _id: '5',
             name: 'Puma Slim Pant',
             category: 'Pants',
             image: '/images/p5.jpg',
@@ -61,7 +72,6 @@ const data = { /*data is an object*/
             countInStock: 5,
         },
         {
-            _id: '6',
             name: 'Adidas Fit Pant',
             category: 'Pants',
             image: '/images/p6.jpg',
